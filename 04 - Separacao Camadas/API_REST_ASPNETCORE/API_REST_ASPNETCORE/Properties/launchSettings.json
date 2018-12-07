@@ -12,7 +12,8 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "api/persons",
+      //"launchUrl": "api/persons",
+      "launchUrl": "api/v1/persons",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -20,7 +21,8 @@
     "API_REST_ASPNETCORE": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/persons",
+      //"launchUrl": "api/persons",
+      "launchUrl": "api/v1/persons",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
@@ -29,8 +31,8 @@
     "Docker": {
       "commandName": "Docker",
       "launchBrowser": true,
-      "launchUrl": "{Scheme}://{ServiceHost}/api/v/persons"
-      //[ "Route(\"api/v{version:apiVersion}/[controller]\")" ]
+      //"launchUrl": "{Scheme}://{ServiceHost}/api/persons/"
+      "launchUrl": "{Scheme}://{ServiceHost}/api/v1/persons"
     }
   }
 }

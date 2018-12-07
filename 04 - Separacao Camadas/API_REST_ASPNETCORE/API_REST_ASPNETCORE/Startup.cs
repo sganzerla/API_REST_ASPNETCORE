@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using API_REST_ASPNETCORE.Business;
+using API_REST_ASPNETCORE.Business.Implementations;
 using API_REST_ASPNETCORE.db.Context;
-using API_REST_ASPNETCORE.Services.Implementations;
+using API_REST_ASPNETCORE.Repository;
+using API_REST_ASPNETCORE.Repository.Implementations;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace API_REST_ASPNETCORE
 {
@@ -35,10 +31,11 @@ namespace API_REST_ASPNETCORE
             //add framework services
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            services.AddApiVersioning();
-
+            services.AddApiVersioning();            
             //dependency injection
-            services.AddScoped<IPersonService, PersonServiceImpl>();
+            services.AddScoped<IPersonBusiness, PersonBusinessImpl>();
+            //dependency injection
+            services.AddScoped<IPersonRepository, PersonRepositoryImpl>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
