@@ -1,4 +1,4 @@
-﻿using API_REST_ASPNETCORE.db.Context;
+﻿using API_REST_ASPNETCORE.Model.Context;
 using API_REST_ASPNETCORE.Model;
 using System;
 using System.Collections.Generic;
@@ -55,7 +55,7 @@ namespace API_REST_ASPNETCORE.Repository.Implementations
 
         public Person Update(Person person)
         {
-            if (!Exist(person.Id)) return new Person();
+            if (!Exist(person.Id)) return null;
 
             var result = _context.Persons.SingleOrDefault(p => p.Id.Equals(person.Id));
 

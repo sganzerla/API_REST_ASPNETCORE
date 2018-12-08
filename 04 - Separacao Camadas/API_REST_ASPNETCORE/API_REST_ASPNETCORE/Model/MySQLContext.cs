@@ -1,11 +1,7 @@
 ﻿using API_REST_ASPNETCORE.Model;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace API_REST_ASPNETCORE.db.Context
+namespace API_REST_ASPNETCORE.Model.Context
 {
     public class MySQLContext : DbContext
     {

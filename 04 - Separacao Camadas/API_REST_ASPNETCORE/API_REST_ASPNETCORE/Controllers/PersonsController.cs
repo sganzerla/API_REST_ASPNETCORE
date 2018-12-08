@@ -46,7 +46,9 @@ namespace API_REST_ASPNETCORE.Controllers
         public ActionResult Put(int id, [FromBody]  Person person)
         {
             if (person == null) return BadRequest();
-            return new ObjectResult(_personBusiness.Update(person));
+            var updatePerson = _personBusiness.Update(person);
+            if (updatePerson == null) return BadRequest();
+            return new ObjectResult(updatePerson);
         }
 
         // DELETE api/persons/5

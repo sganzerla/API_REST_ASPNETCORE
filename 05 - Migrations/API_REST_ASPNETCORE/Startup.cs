@@ -1,18 +1,4 @@
-﻿//using API_REST_ASPNETCORE.Business;
-//using API_REST_ASPNETCORE.Business.Implementations;
-//using API_REST_ASPNETCORE.Model.Context;
-//using API_REST_ASPNETCORE.Repository;
-//using API_REST_ASPNETCORE.Repository.Implementations;
-//using Microsoft.AspNetCore.Builder;
-//using Microsoft.AspNetCore.Hosting;
-//using Microsoft.EntityFrameworkCore;
-//using Microsoft.Extensions.Configuration;
-//using Microsoft.Extensions.DependencyInjection;
-//using Microsoft.Extensions.Logging;
-//using System;
-//using System.Collections.Generic;
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 using Microsoft.Extensions.Configuration;
@@ -22,16 +8,14 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 
-using API_REST_ASPNETCORE.Model.Context;
-using API_REST_ASPNETCORE.Business;
-using API_REST_ASPNETCORE.Business.Implementations;
-using API_REST_ASPNETCORE.Repository;
-using API_REST_ASPNETCORE.Repository.Implementations;
+using RestWithASPNETUdemy.Model.Context;
+using RestWithASPNETUdemy.Business;
+using RestWithASPNETUdemy.Business.Implementattions;
 
-namespace API_REST_ASPNETCORE
+namespace RestWithASPNETUdemy
 {
     public class Startup
-    {        
+    {
         private readonly ILogger _logger;
         public IConfiguration _configuration { get; }
         public IHostingEnvironment _environment { get; }
@@ -74,7 +58,7 @@ namespace API_REST_ASPNETCORE
 
             services.AddMvc();
 
-            services.AddApiVersioning(option => option.ReportApiVersions = true);
+			services.AddApiVersioning(option => option.ReportApiVersions = true);
 
             //Dependency Injection
             services.AddScoped<IPersonBusiness, PersonBusinessImpl>();
