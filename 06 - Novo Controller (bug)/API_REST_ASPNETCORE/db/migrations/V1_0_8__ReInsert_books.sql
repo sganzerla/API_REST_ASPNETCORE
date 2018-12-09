@@ -1,0 +1,1 @@
+﻿INSERT INTO `books` ( `Author`, `LaunchDate`, `Price`, `Title`) VALUES ('Dan Brown', '2018-12-08 19:23:53.000000', '29.90', 'Fortaleza Digital');
