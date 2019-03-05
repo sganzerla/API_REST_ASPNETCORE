@@ -1,4 +1,3 @@
-#webapi-asp-net-core
 <h3>Originalmente de restful-apis-do-0-a-nuvem-com-aspnet-core-e-docker de Leandro Costa</h3>
 <p>
   Tópicos abordados:
